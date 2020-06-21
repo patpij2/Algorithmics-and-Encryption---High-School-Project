@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Projekt Gimnazjalny</title>
+	<meta name="description" content="Projekt Gimnazjalny">
+	<meta name="keywords" content="Projekt Gimnazjalny">
+	<meta name="author" content="Uczestnicy Projektu Gimnazjalnego">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+	<!-- Tak się robi zdjęcia - <IMG SRC=nazwa_pliku_rysunku_z_ewentualnym_adresem>
+		 Paragrafy znacznikiem <p></p>
+		 Więcej se wyguglajcie-->
+	
+<!--	<script>
+	startList = function() {
+if (document.all&&document;.getElementById) {
+navRoot = document.getElementById("nav");
+for (i=0; i;
+if (node.nodeName=="LI") {
+node.onmouseover=function() {
+this.className+=" over";
+  }
+  node.onmouseout=function() {
+  this.className=this.className.replace»
+ (" over", "");
+   }
+   }
+  }
+ }
+}
+window.onload=startList;
+
+</script>-->
+	
+<script>
+function bubbleSort(items) {
+	var text=document.getElementById("tekst").value;
+	var items = text.split(",").map(Number);
+	var length = items.length;
+	for (var i = (length - 1); i >= 0; i--) {
+		//Number of passes
+		for (var j = (length - i); j > 0; j--) {
+			//Compare the adjacent positions
+			if (items[j] < items[j - 1]) {
+				//Swap the numbers
+				var tmp = items[j];
+				items[j] = items[j - 1];
+				items[j - 1] = tmp;
+			}
+		}
+	}
+	document.getElementById("wynik").innerHTML=items;
+}
+</script>
+	
+	
+</head>
+
+<body>
+
+	<header>
+	
+		<h1 class="logo">Projekt Gimnazjalny</h1>
+		
+		<nav id="topnav">
+		
+			<ul class="menu">
+				<li><a href="www.yfconference.pl/index.html">Strona główna</a></li>
+				<li><a href="www.yfconference.pl/szyfry.html">Szyfry</a></li>
+				<li><a href="www.yfconference.pl/sortowanie.html">Sortowanie</a></li>
+				<li><a href="www.yfconference.pl/algorytm.html">Algorytmy</a></li>
+			</ul>
+			
+		</nav>
+	
+	</header>
+	
+	<main>
+	
+		<article>
+			
+			<section id="newest">
+				
+				<div class="entries">
+				
+					
+				
+					<header>
+					
+						<h1>Quick sort</h1>
+						<img src="img/quick_sort_partition_animation.gif" alt="Sorting gif">
+					<header>
+		
+		
+	
+	</header>
+	<p>
+	</p>
+	<p>
+						Sortowanie szybkie (ang. quicksort) – jeden z popularnych algorytmów sortowania działających na zasadzie "dziel i zwyciężaj"[dać link].
+Sortowanie QuickSort zostało wynalezione w 1962 przez C.A.R. Hoare'a.
+Algorytm sortowania szybkiego jest wydajny: jego średnia złożoność obliczeniowa jest rzędu 
+O ( n log ⁡ n ) (baaaaaaaaaardzo szybki). Ze względu na szybkość i prostotę implementacji jest powszechnie używany. Jego implementacje znajdują się w bibliotekach standardowych wielu środowisk programowania.
+						</p><p>
+						Ze względu na szybkość i prostotę implementacji jest powszechnie używany. Jego implementacje znajdują się w bibliotekach standardowych wielu środowisk programowania.
+						
+						
+	</p>
+					</header>	
+
+					
+						<!-- początek prostokąta na kod -->
+					<div class="entry">
+						<div class="entrytxt">
+							<h2>
+<pre>procedure bubbleSort( A : lista elementów do posortowania )</br>
+def sort(array=[12,4,5,6,7,3,1,15]):
+    less = []
+    equal = []
+    greater = []
+
+    if len(array) > 1:
+        pivot = array[0]
+        for x in array:
+            if x < pivot:
+                less.append(x)
+            if x == pivot:
+                equal.append(x)
+            if x > pivot:
+                greater.append(x)
+            sort(less)
+            sort(pivot)
+            sort(greater)
+</pre>
+							</h2>
+
+						</div>
+					
+					</div>
+					Pseudokod sortowania bąbelkowego
+					
+					<div class="entry">
+						<div class="entrytxt">
+							<input type="text" id="tekst"></input>
+							<button id="submitek" onclick="bubbleSort()">Szyfruj</button>
+							<p id="wynik"></p>
+						</div>
+					
+					</div>
+					
+					
+				</div>
+				
+			</section>
+
+			<section>
+				
+				<div class="teleport">																																																																																																</p>
+						
+					<a href="#" class="greenbutton">Teleportuj na góre</a>
+				
+				</div>
+				
+			</section>			
+		
+		</article>
+	
+	</main>
+	
+	<footer>
+	
+		<div class="info">
+			Wszelkie prawa zastrzeżone &copy; 2018 Projekt Gimnazjalny
+		</div>
+	
+	</footer>
+
+</body>
+</html>

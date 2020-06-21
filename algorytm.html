@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Projekt Gimnazjalny</title>
+	<meta name="description" content="Projekt Gimnazjalny">
+	<meta name="keywords" content="Projekt Gimnazjalny">
+	<meta name="author" content="Uczestnicy Projektu Gimnazjalnego">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+	<!-- Tak się robi zdjęcia - <IMG SRC=nazwa_pliku_rysunku_z_ewentualnym_adresem>
+		 Paragrafy znacznikiem <p></p>
+		 Więcej se wyguglajcie-->
+	
+	
+	
+</head>
+
+<body>
+
+	<header>
+	
+		<h1 class="logo">Projekt Gimnazjalny</h1>
+		
+		<nav id="topnav">
+		
+			<ul class="menu">
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="szyfry.html">Szyfry</a></li>
+				<li><a href="sortowanie.html">Sortowanie</a></li>
+				<li><a href="algorytm.html">Algorytmy</a></li>
+			</ul>
+			
+		</nav>
+	
+	</header>
+	
+	<main>
+	
+		<article>
+			
+			<section id="newest">
+				
+				<div class="entries">
+				
+					<h1>
+						Algorytmy
+					</h1>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<!-- szyfr cezara - Szymon -->
+					<h2>
+						Algorytm Euklidesa
+					</h2>
+					
+					<p>
+						Algorytm Euklidesa to jeden z najbardziej znanych, ale i najstarszych dzisiaj stosowanych algorytmów. Służy on do wyliczania największego wspólnego dzilenika.
+<p><h4>Najpierw pokażę przykład działania algorytmu dla wartości 243 i 111: </h4></p>
+								</p>
+					
+					<p>
+						
+nwd (243, 111) = nwd(111, 21) = nwd(21, 6) = nwd(6, 3) = 3
+					</p>
+					
+					
+					<p>
+				<br><h4>Cały algorytm można przedstawić za pomocą jednego warunku:</p></h4>
+					<!-- obrazek -->
+					<img src="Algorytm/img/algorytm-euklidesa.jpg" alt="Algorytm Euklidesa - wizualizacja" />
+					
+					
+					<!-- algorytm szyfrujący -->
+					</br><p><h4>Podaj dwie liczby</h4></p>
+<p>
+a: <input type="text" id="a" value="0"><br />
+b: <input type="text" id="b" value="0"><br />
+</p>
+<p>
+<button type="button" onclick="policz()">Policz</button><br />
+</p>
+<h2>Obliczenia:</h2>
+<p>
+NWD: <span id="nwd"></span><br />
+</p>
+<script>
+function nwd(a, b) {
+if(a == 0)
+return b;
+return nwd(b%a, a);
+}
+function policz() {
+var _a = document.getElementById('a').value;
+var _b = document.getElementById('b').value;
+
+document.getElementById('nwd').innerHTML = nwd(_a, _b);
+}
+</script>
+						
+						
+						
+						<script>
+function nwd(a, b) {
+if(a == 0)
+return b;
+return nwd(b%a, a);
+}
+function policz() {
+var _a = document.getElementById('a').value;
+var _b = document.getElementById('b').value;
+
+document.getElementById('nwd').innerHTML = nwd(_a, _b);
+}
+</script>
+						
+					
+					
+					
+					
+					
+					
+					
+					
+				<!-- szyfr vigener'a - miłosz -->
+				<!--xmlns="http://www.w3.org/1999/xhtml" -->
+</br></br>
+				
+				
+
+				<h4>Kliknij "Run" i poczekaj chwilę </h4>
+				
+				<iframe src="https://trinket.io/embed/python/f867c8e392" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+				
+				
+			
+				
+				
+				
+				
+				
+				
+				<!-- szyfr ślimakowy - antek f -->
+				<header>
+					
+						
+						<p><h5><em>Jeśli a jest podzielne przez b, to wtedy nwd(a, b) = b</h5>
+<p><h5>W przeciwnym razie nwd(a, b) = nwd(b, a mod b)</em></h5>
+<p>Może się to wydawać dość nieintuicyjne, ale wszelkie możliwe wątpliwości rozwieje dowód:
+<p><h5><em>D = nwd(a, b), z tego wynika, że (b*n+r) mod b = 0. </em></h5>
+<p>Z definicji nwd wynika także, że b mod d = 0. Wnisosek nasuwa się praktycznie sam, mianowicie 
+<h5><em>r mod d = 0, a więc nwd(a, b) = nwd(b, r)</em></h5>
+Algorytmu można także użyć do obliczaniana najmniejszej wspólnej wielokortności za pomocą wzoru:
+<h5>Nww(a, b) = a*b / nwd(a, b)</h5>
+
+					</header>	
+
+
+					
+				<img src="Algorytm/img/Euklides.jpg" style="margin-top: 20px; width: 250px;">
+					
+					
+					
+					
+					
+					
+				</div>
+				
+			</section>
+
+			<section>
+				
+				<div class="teleport">																																																																																																</p>
+						
+					<a href="#" class="greenbutton">Teleportuj na góre</a>
+				
+				</div>
+				
+			</section>			
+		
+		</article>
+	
+	</main>
+	
+	<footer>
+	
+		<div class="info">
+			Wszelkie prawa zastrzeżone &copy; 2018 Projekt Gimnazjalny
+		</div>
+	
+	</footer>
+
+</body>
+</html>
